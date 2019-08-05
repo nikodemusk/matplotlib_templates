@@ -1,5 +1,3 @@
-
-
 ## Matplotlib Templates
 ### Background
 I frequently need customised graphs of functions, equations or other figures in my work as a teacher in maths and physics. With [Matplotlib](https://matplotlib.org) and [Python](https://www.python.org) it is possible to create almost any type of graphics in any size. The downside is that the creation process is time consuming due to the need of specify all options in the plots and the code may go long. For me, it's not something I want to start from scratch with for each plot. Therefore, I started to create templates for different kind of plots.
@@ -22,10 +20,10 @@ In order to automatically publish the plots for global access, it's built in sup
 
 * A Digital Ocean Spaces account
 If you have, you may want to configure your OS environment variables with
-	* `REGION_NAME`, e.g. 'nyc3'
-	* `GRAPH_BUCKET`, e.g. 'mygraphs'
-	* `AWS_ACCESS_KEY_ID`, an ID string you get from Digital Ocean
-	* `AWS_SECRET_ACCESS_KEY`, also an ID string you get from Digital Ocean
+        * `REGION_NAME`, e.g. 'nyc3'
+        * `GRAPH_BUCKET`, e.g. 'mygraphs'
+        * `AWS_ACCESS_KEY_ID`, an ID string you get from Digital Ocean
+        * `AWS_SECRET_ACCESS_KEY`, also an ID string you get from Digital Ocean
 * The Python libraries `boto3` and `botocore`installed
 
 I think an [Amazon S3](https://aws.amazon.com/s3/) account will work too, with a slight change in the library file `spacelib/tospace.py`.
