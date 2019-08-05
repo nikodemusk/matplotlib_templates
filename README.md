@@ -29,6 +29,7 @@ If you have, you may want to configure your OS environment variables with
 I think an [Amazon S3](https://aws.amazon.com/s3/) account will work too, with a slight change in the library file `spacelib/tospace.py`.
 #### Sample plot
 ![Function Graph Template](plots/function_graph_template.png)
+![](https://xicode.nyc3.digitaloceanspaces.com/matplotlib_templates/function_graph_template.png]
 
 ### More to come...
 I expect my self go further with a template for visualise statistical data visualised in bar charts, line charts and scatter plots, plots of equations of two variables and geometric figure plots.
