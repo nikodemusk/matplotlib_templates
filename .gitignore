@@ -1,0 +1,8 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore emacs backup files
+*~
+
+# Ignore library files
+spaceslib/__pycache__
