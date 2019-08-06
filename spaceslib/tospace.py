@@ -29,5 +29,6 @@ def upload(name, localPath, remotePath):
    client.upload_file(str(localPath + name), bucket,
                       remotePath + name,
                       ExtraArgs={'ACL': 'public-read',
-                                 'ContentType': mime.from_file(localPath + name)})
+                                 'ContentType': mime.from_file(localPath + name),
+                                 'CacheControl': 'no-cache'})
    return(f"https://{bucket}.{region_name}.digitaloceanspaces.com/{remotePath}{name}")
