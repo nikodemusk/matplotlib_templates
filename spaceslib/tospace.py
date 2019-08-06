@@ -4,6 +4,7 @@
 # https://docs.aws.amazon.com/code-samples/latest/catalog/python-s3-s3-python-example-upload-file.py.html
 
 import os
+import magic
 from boto3 import session
 from botocore.client import Config
 
@@ -12,6 +13,8 @@ SECRET_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 URL = 'https://nyc3.digitaloceanspaces.com'
 bucket = os.environ['GRAPH_BUCKET']
 region_name = os.environ['REGION_NAME']
+
+mime = magic.Magic(mime=True)
 
 #Initiate session
 session = session.Session()
@@ -22,7 +25,9 @@ client = session.client('s3',
                         aws_secret_access_key = SECRET_KEY)
 
 def upload(name, localPath, remotePath):
+   mimeType = mime.from_file(str(localPath + name))
    client.upload_file(str(localPath + name), bucket,
                       remotePath + name,
-                      ExtraArgs={'ACL': 'public-read'})
+                      ExtraArgs={'ACL': 'public-read',
+                                 'ContentType': mime.from_file(localPath + name)})
    return(f"https://{bucket}.{region_name}.digitaloceanspaces.com/{remotePath}{name}")
