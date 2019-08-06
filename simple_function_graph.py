@@ -22,7 +22,7 @@ if uploadToSpace:
 localPath = os.environ['PWD'] + '/plots/'
 
 # The extension may be png, eps, pdf or svg
-fileName = "function_graph_template.png"
+fileName = "function_graph_template.svg"
 
 ### Define the size and aspect ratio of image ###
 dpi, width = 100, 640 # Matplotlib default, 100 dpi, 640 pixels wide
